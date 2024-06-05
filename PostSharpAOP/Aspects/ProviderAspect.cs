@@ -1,5 +1,5 @@
 ﻿using PostSharp.Aspects;
-using System;
+using PostSharp.Serialization;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -8,7 +8,7 @@ namespace PostSharpAOPSample.Aspects
 
     // https://www.postsharp.net/blog/category/Tutorial?page=3
 
-    [Serializable]
+    [PSerializable]
     public class ProviderAspect : MethodLevelAspect, IAspectProvider
     {
         public IEnumerable<AspectInstance> ProvideAspects(object targetElement)

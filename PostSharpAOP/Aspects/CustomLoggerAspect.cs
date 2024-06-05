@@ -1,5 +1,5 @@
 ﻿using PostSharp.Aspects;
-using System;
+using PostSharp.Serialization;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -11,7 +11,7 @@ namespace PostSharpAOPSample.Aspects
     // https://doc.postsharp.net/method-interception
     // https://doc.postsharp.net/method-decorator
 
-    [Serializable]
+    [PSerializable]
     public class CustomLoggerAspect : MethodInterceptionAspect
     {
         private string[] parameterNames;
